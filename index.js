@@ -6,7 +6,7 @@ const {
     blendLayers
 } = require('./build/Release/LedServerUtilities.node');
 
-export {
+module.exports = {
     interpolatePixels,
     interpolateTwoLayers,
     blendPixels,
