@@ -9,6 +9,7 @@ include_directories(${CMAKE_JS_INC})
 # needed to resolve nan.h library
 #include_directories(${CMAKE_JS_INC} ../nan)
 include_directories(${CMAKE_JS_INC} ./node_modules/node-addon-api)
+include_directories(${CMAKE_JS_INC} ../node-addon-api)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 file(GLOB SOURCE_FILES "*.cpp" "*.h")
