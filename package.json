@@ -1,8 +1,11 @@
 {
   "name": "led-server-utilities",
+  "author": "Ionut Costica <ionut.costica@gmail.com>",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "version": "1.0.0",
   "dependencies": {
     "cmake-js": "^4.0.1",
-    "nan": "^2.12.1",
     "node-addon-api": "^1.6.2"
   },
   "scripts": {
