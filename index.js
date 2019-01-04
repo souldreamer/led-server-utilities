@@ -3,7 +3,9 @@ const {
     interpolateTwoLayers,
     blendPixels,
     blendTwoPixels,
-    blendLayers
+    blendLayers,
+    applyKernelToLayer,
+    dimLayer
 } = require('./build/Release/LedServerUtilities.node');
 
 module.exports = {
@@ -11,5 +13,7 @@ module.exports = {
     interpolateTwoLayers,
     blendPixels,
     blendTwoPixels,
-    blendLayers
+    blendLayers,
+    applyKernelToLayer,
+    dimLayer
 };

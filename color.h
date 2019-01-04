@@ -20,7 +20,11 @@ template<class T>
 inline T getKey(Napi::Env env, Napi::Object object, std::string key, T defaultValue) {
 	const auto keyValue = object.Get(Napi::String::New(env, key));
 	if (keyValue.IsNull() || keyValue.IsUndefined()) return defaultValue;
-	return keyValue.ToNumber().DoubleValue();
+	try {
+		return keyValue.ToNumber().DoubleValue();
+	} catch (Napi::Error &err) {
+		return defaultValue;
+	}
 }
 
 inline v8::Maybe<Color> objectToColor(Napi::Env env, v8::Maybe<Napi::Object> object) {

@@ -40,6 +40,14 @@ Napi::Value BlendLayers(const Napi::CallbackInfo& info) {
 	return blendLayers(info.Env(), info[0], info[1], info[2]);
 }
 
+Napi::Value ApplyKernelToLayer(const Napi::CallbackInfo& info) {
+	return applyKernelToLayer(info.Env(), info[0], info[1], info[2], info[3], info[4]);
+}
+
+Napi::Value DimLayer(const Napi::CallbackInfo& info) {
+	return dimLayer(info.Env(), info[0], info[1], info[2]);
+}
+
 Napi::Object Init(Napi::Env env, Napi::Object exports) {
 	exports.Set(
 		Napi::String::New(env, "interpolatePixels"),
@@ -60,6 +68,14 @@ Napi::Object Init(Napi::Env env, Napi::Object exports) {
 	exports.Set(
 		Napi::String::New(env, "blendLayers"),
 		Napi::Function::New(env, BlendLayers)
+	);
+	exports.Set(
+		Napi::String::New(env, "applyKernelToLayer"),
+		Napi::Function::New(env, ApplyKernelToLayer)
+	);
+	exports.Set(
+		Napi::String::New(env, "dimLayer"),
+		Napi::Function::New(env, DimLayer)
 	);
 	return exports;
 }

@@ -3,7 +3,7 @@
   "author": "Ionut Costica <ionut.costica@gmail.com>",
   "module": "index.js",
   "types": "index.d.ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "cmake-js": "^4.0.1",
     "node-addon-api": "^1.6.2"

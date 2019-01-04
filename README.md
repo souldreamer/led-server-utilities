@@ -6,8 +6,11 @@ _hopefully_ speed up some of the calculations of the LED
 server that happen pretty often).
 
 ## Functions
-* `interpolatePixels` - interpolates between two colors
+* `interpolatePixels` - interpolates between two colors -
+**don't use this in practice, it's slower than the JS/TS equivalent**
 * `interpolateTwoLayers` - interpolates two layers pixel by pixel
+* `applyKernelToLayer` - applies a kernel to a layer
+* `dimLayer` - dims a layer
 * `blendPixels` - blends an array of pixels
 * `blendTwoPixels` - blends two colors
 * `blendLayers` - blends an array of layers pixel by pixel
